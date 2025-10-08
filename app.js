@@ -1,19 +1,17 @@
 window.onload = function () {
-    const searchToggle = document.getElementById("search-toggle");
-    const searchBox = document.getElementById("search-box");
+    const searchToggle = document.getElementById("busca-toggle");
+    const searchBox = document.getElementById("caixa-busca");
   
     if (!searchToggle || !searchBox) {
       console.error("Elementos da busca não encontrados!");
       return;
     }
   
-    // Clique na lupa
     searchToggle.addEventListener("click", function (event) {
       event.preventDefault();
       searchBox.classList.toggle("active");
     });
   
-    // Fechar ao clicar fora
     document.addEventListener("click", function (event) {
       if (
         !searchBox.contains(event.target) &&

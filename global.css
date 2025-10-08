@@ -3,15 +3,21 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: rgb(250, 248, 248);
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 100vh;      
 }
 
 .container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; 
     gap: 100px;
 }
 
@@ -29,6 +35,7 @@ header {
     padding: 0 30px;
     box-shadow: 0 0 15px #10192468;
     z-index: 999;
+    width: 100%;
 }
 
 header ul {
@@ -36,16 +43,12 @@ header ul {
     align-items: center;
     gap: 20px;
     list-style: none;
-    background-color: rgba(18, 18, 114, 0.3);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px #1d213d65;
-    padding: 10px 20px;
+    box-shadow: 0 0 15px #ffffff68;
+    margin-right: 80px;
+    padding: 8px 20px;
     border-radius: 10px;
 }
 
-header ul li {
-    position: relative;
-}
 
 header ul a {
     display: flex;
@@ -53,26 +56,21 @@ header ul a {
     text-decoration: none;
     color: white;
     font-weight: 700;
-    padding: 6px 10px;
-    border-radius: 8px;
+    padding: 10px 10px;
     transition: 0.3s ease;
 }
 
-header ul a:hover .box-icons {
-    border-color: rgb(228, 224, 34);
-    background-color: rgba(228, 224, 34, 0.2);
-}
 
 header ul a:hover {
     color: rgb(73, 65, 146);
 }
 
-.left {
+.hdlogo {
     display: flex;
     align-items: center;
 }
 
-.left img {
+.hdlogo img {
     width: 40px;
     margin: 0 15px;
 }
@@ -88,6 +86,7 @@ header ul a:hover {
     object-fit: cover;
 }
 
+
 @media (max-aspect-ratio: 16/9) {
     .video-fundo {
         width: auto;
@@ -95,17 +94,18 @@ header ul a:hover {
     }
 }
 
-.search-icon img.icon-busca {
+
+.busca-icon img.icon-busca {
     width: 25px;
     height: 25px;
     cursor: pointer;
 }
 
-.search-box {
+.caixa-busca {
     position: absolute;
     top: 70px;
     right: 0;
-    background: rgba(18, 18, 114, 0.8);
+    background: rgba(99, 0, 124, 0.8);
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -117,13 +117,13 @@ header ul a:hover {
     transition: all 0.3s ease;
 }
 
-.search-box.active {
+.caixa-busca.active {
     opacity: 1;
     transform: scale(1);
     pointer-events: all;
 }
 
-.search-box input {
+.caixa-busca input {
     padding: 5px 10px;
     border: none;
     outline: none;
@@ -131,8 +131,8 @@ header ul a:hover {
     font-size: 14px;
 }
 
-.search-box button {
-    background-color: rgb(228, 224, 34);
+.caixa-busca button {
+    background-color: rgb(180, 27, 226);
     color: black;
     border: none;
     border-radius: 5px;
@@ -142,16 +142,75 @@ header ul a:hover {
     transition: 0.2s;
 }
 
-.search-box button:hover {
-    background-color: white;
+.caixa-busca button:hover {
+    background-color: rgb(0, 79, 226);
 }
 
 .content {
     margin-top: 100px;
-    width: 90%;
-    max-width: 1200px;
+    width: 50%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
 }
+
+.content .main {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #1d213d65;
+    color: rgb(255, 255, 255);
+    padding: 1rem 1rem;
+    font-size: large;
+    height: fit-content;
+    border-radius: 1rem;
+}
+
+
+footer {
+    position: fixed;
+    display: flex;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    padding: 0 30px;
+    box-shadow: 0 0 15px #10192468;
+    z-index: 999;
+    justify-content: center;
+}
+
+
+.pdf-cur {
+  display: inline-block;
+  background-color: #ae00ff;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.pdf-cur:hover {
+  background-color: #0037acc0;
+}
+
+.forms-container {
+    width: 750px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
