@@ -191,6 +191,7 @@ if (document.body.contains(document.getElementById('abrirCadastro'))) {
 
 
 // Login
+
 const botaoLogin = document.querySelector('.btt-login');
 
 if (botaoLogin) {

@@ -506,3 +506,12 @@ footer {
     background-color: #ff0000;
     transform: scale(1.15);
 }
+
+
+.menu-icon {
+    width: 26px;
+    height: 23px;
+    margin-right:8px;
+}
+
+
