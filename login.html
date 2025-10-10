@@ -6,9 +6,10 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="global.css">
+    
 </head>
 <body>
-    <video class="video-fundo" loop autoplay muted playsinline src="videos/background4.mp4" type="video/mp4"></video>
+    <video class="video-fundo" loop autoplay muted playsinline src="videos/background4.mp4"></video>
 
     <header>
         <div class="hdlogo">
@@ -21,26 +22,51 @@
         </ul>
     </header>
 
-    <div class="forms-container">
-        <div class="forms">
-            <div class="forms-btt">
-                <button class="btt-login" id="login">Login</button>
-                <button class="btt-cadastro" id="register">Cadastro</button>
+    <div class="texto-login">
+        <h2>Bem-<span style="color: rgb(148, 37, 192)">vindo!</span></h2>
+        <p>Entre com seu nome de usuário e senha abaixo, ou crie uma conta.</p>
+    </div>
+
+<div class="login-container">
+
+    <div class="forms-container" id="formsContainer">
+
+        <div class="forms forms-login active">
+            <div class="input">
+                <input type="text" placeholder="Usuário" required>
+                <input type="password" placeholder="Senha" required>
+                <button class="btt-login">Entrar</button>
+                <button class="btt-cadastro" id="abrirCadastro">Cadastrar-se</button>
             </div>
-            <form class="login-form">
-                <div class="input">
-                    <input type="text" placeholder="Usuário" required>
-                    <input type="password" placeholder="Senha" required>
-                    <button>Entrar</button>
-                </div>                
+        </div>
+
+        <div class="forms forms-cadastro">
+            <div class="input">
+            <form id="formAdmin">
+                <div class="input-admin">
+                    <input type="text" id="nome" placeholder="Nome de Usuário" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                    <input type="tel" id="telefone" placeholder="Telefone" required>
+                    <input type="date" id="dataNasc" required>
+                </div>
+                <div class="botoes-admin">
+                    <button type="submit" id="btnCadastrar">Cadastrar</button>
+                </div>
+
+                <button class="btt-cadastro" id="voltarLogin">Voltar</button>
             </form>
+            </div>
         </div>
     </div>
+</div>
 
     <footer>
         <p>Projeto <span style="color: rgb(190, 29, 253)">WebFrontEnd</span>. | André Born. | 
         <a href="link/curriculo.pdf" target="_blank" class="pdf-cur">Currículo.</a></p>
     </footer>
+
+    <script src="app.js"> </script>
 </body>
 
 </html>
