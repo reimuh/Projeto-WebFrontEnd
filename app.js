@@ -252,3 +252,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+
+// Salvar as notas
+
+const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+if (usuarioLogado && notasContainer) {
+    const chaveNotas = `notas_${usuarioLogado.email}`;
+    let notas = JSON.parse(localStorage.getItem(chaveNotas)) || [];
+
+    function renderizarNotas() {
+        notasContainer.querySelectorAll('.nota').forEach(n => n.remove());
+        notas.forEach((nota, index) => {
+            const divNota = document.createElement('div');
+            divNota.className = 'nota';
+
+            const areaTexto = document.createElement('textarea');
+            areaTexto.value = nota.texto;
+
+            const deletarX = document.createElement('button');
+            deletarX.className = 'deletar-x';
+            deletarX.innerHTML = '×';
+            deletarX.onclick = () => {
+                notas.splice(index, 1);
+                salvarNotas();
+                renderizarNotas();
+            };
+
+            areaTexto.addEventListener('input', () => {
+                notas[index].texto = areaTexto.value;
+                salvarNotas();
+            });
+
+            divNota.appendChild(areaTexto);
+            divNota.appendChild(deletarX);
+            notasContainer.insertBefore(divNota, adicionarBtt);
+        });
+    }
+
+    function salvarNotas() {
+        localStorage.setItem(chaveNotas, JSON.stringify(notas));
+    }
+
+    adicionarBtt.addEventListener('click', () => {
+        notas.push({ texto: '', data: new Date().toLocaleString() });
+        salvarNotas();
+        renderizarNotas();
+    });
+
+    renderizarNotas();
+}
