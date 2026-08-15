@@ -1,6 +1,6 @@
 # Projeto WebFrontEnd: Página web/Site interativo.
 Este projeto consiste na elaboração de um site de manager de notas.
-Ele consiste na elaboração de uma página web, utilizando  HTML, CSS e JavaScript para a construção de seu layout, e a implementação de funcionalidades de uma aplicação web utilizando JavaScript.
+Ele é constituido em uma elaboração de página web, utilizando  HTML, CSS e JavaScript para a construção de seu layout, e a implementação de funcionalidades de uma aplicação web utilizando JavaScript.
 
 ## Funcionalidades
 Suas funcionalidades são:
